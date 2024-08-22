@@ -2155,6 +2155,7 @@ GameObject:
   - component: {fileID: 1860598510}
   - component: {fileID: 1860598509}
   - component: {fileID: 1860598512}
+  - component: {fileID: 1860598513}
   m_Layer: 0
   m_Name: Pusher
   m_TagString: Untagged
@@ -2275,6 +2276,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1860598513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860598507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8d4a1b566d34a10af52974e2ffb56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 2
+  speed: 1
 --- !u!1 &1902546575
 GameObject:
   m_ObjectHideFlags: 0
