@@ -16,7 +16,9 @@ public class Pusher : MonoBehaviour
 
     void Update()
     {
-        // 変位を計算
+
+        //行ったり来たりするため
+        // Sinに時間関数をかけるパターン
         float z = amplitude * Mathf.Sin(Time.time * speed);
 
         // zを変位させたポジションに再設定
