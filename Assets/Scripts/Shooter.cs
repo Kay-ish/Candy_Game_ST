@@ -31,7 +31,10 @@ public class Shooter : MonoBehaviour
     {
         Debug.Log("Screen.width:" + Screen.width);
 
-        shotSound = GetComponent<AudioSource>();
+        //このscriptがついてるOBJからGetCompoしてshotSoundに代入
+        //これで　shotSound.Play();　するだけで再生する
+        shotSound = this.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -73,7 +76,8 @@ public class Shooter : MonoBehaviour
 
     public void Shot()
     {
-        if (candyManager.GetCandyAmount() <= 0) return; //残数0なら何もやらずにメソッド終了
+        //指定した数を使い切って残数0なら何もやらずにメソッド終了※if文 省略形記述
+        if (candyManager.GetCandyAmount() <= 0) return; 
 
         if (shotPower <= 0) return;
 
@@ -111,7 +115,7 @@ public class Shooter : MonoBehaviour
 
         ConsumePower();
 
-        shotSound.Play(); //AudioSourceに設置されているAudioClipを再生する
+        shotSound.Play(); //ShooterのAudioSourceに設置されているAudioClipを再生する
     }
 
     void OnGUI()
@@ -124,6 +128,8 @@ public class Shooter : MonoBehaviour
         GUI.Label(new Rect(50, 65, 100, 30), label);
     }
 
+
+    //シューターのパワー増減
     void ConsumePower()
     {
         shotPower--;　//パワーを1減らす

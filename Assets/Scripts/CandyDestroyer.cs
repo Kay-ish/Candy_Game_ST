@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CandyDestroyer : MonoBehaviour
 {
-    public CandyManager candyManager;
-    public int reward;
+    public CandyManager candyManager;   //CandyManegerスクリプトの力が必要なので受け皿
+    public int reward;  //いくつ増やすか
     public GameObject effectPrefab;
     public Vector3 effectRotation;
 
